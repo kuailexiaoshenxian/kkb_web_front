@@ -15,6 +15,11 @@ export default defineConfig({
       "utils": path.resolve(__dirname, "src/utils")
     }
   },
+  server: {
+    open: true,
+    port: 3000,
+    host: '0.0.0.0'
+  },
   plugins: [
     vue(),
     AutoImport({

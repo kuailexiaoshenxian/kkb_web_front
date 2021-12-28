@@ -12,7 +12,8 @@
   <div class="course">
     <div
       class="course-item"
-      v-for="(item, index) in courseList">
+      v-for="(item, index) in courseList"
+      @click="$router.push(`/video/${item.id}`)">
       <img class="course-cover" :src="item.cover" />
       <div class="course-name">{{item.name}}</div>
       <div class="course-author">{{item.author}}</div>
@@ -49,66 +50,78 @@ const sortList = reactive([
 
 const courseList = reactive([
   {
+    id: 1,
     cover: getImageURL('course1.jpg'),
     name: 'Python入门教学',
     author: '张志伟'
   },
   {
+    id: 2,
     cover: getImageURL('course2.jpg'),
     name: 'C语言入门教学',
     author: '张志伟'
   },
   {
+    id: 3,
     cover: getImageURL('course3.jpg'),
     name: 'C语言入门教学',
     name: 'Java小白入门教学',
     author: '张志伟'
   },
   {
+    id: 4,
     cover: getImageURL('course4.jpg'),
     name: 'C语言入门教学',
     name: '数据结构进阶',
     author: '张志伟'
   },
-   {
+  {
+    id: 1,
     cover: getImageURL('course1.jpg'),
     name: 'Python入门教学',
     author: '张志伟'
   },
   {
+    id: 2,
     cover: getImageURL('course2.jpg'),
     name: 'C语言入门教学',
     author: '张志伟'
   },
   {
+    id: 3,
     cover: getImageURL('course3.jpg'),
     name: 'C语言入门教学',
     name: 'Java小白入门教学',
     author: '张志伟'
   },
   {
+    id: 4,
     cover: getImageURL('course4.jpg'),
     name: 'C语言入门教学',
     name: '数据结构进阶',
     author: '张志伟'
   },
-   {
+  {
+    id: 1,
     cover: getImageURL('course1.jpg'),
     name: 'Python入门教学',
     author: '张志伟'
   },
   {
+    id: 2,
     cover: getImageURL('course2.jpg'),
     name: 'C语言入门教学',
     author: '张志伟'
   },
   {
+    id: 3,
     cover: getImageURL('course3.jpg'),
     name: 'C语言入门教学',
     name: 'Java小白入门教学',
     author: '张志伟'
   },
   {
+    id: 4,
     cover: getImageURL('course4.jpg'),
     name: 'C语言入门教学',
     name: '数据结构进阶',
@@ -120,7 +133,7 @@ const sortIndex = ref(0)
 
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .sort {
   display: flex;
   align-items: center;
@@ -159,6 +172,8 @@ const sortIndex = ref(0)
     border-radius: 4px;
     border: 1px solid #eee;
     margin: 0 20px 20px 0;
+    cursor: pointer;
+    overflow: hidden;
 
     .course-cover {
       width: 100%;

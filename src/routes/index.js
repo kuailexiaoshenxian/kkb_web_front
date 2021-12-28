@@ -1,5 +1,6 @@
 import Layout from '../views/layout/Layout.vue'
 import Home from '../views/home/Home.vue'
+import Course from '../views/course/Course.vue'
 
 const routes = [
   {
@@ -9,6 +10,9 @@ const routes = [
     children: [{
       path: 'home',
       component: Home
+    },{
+      path: 'video/:id',
+      component: Course
     }]
   }
 ]

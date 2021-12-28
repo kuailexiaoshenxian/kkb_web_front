@@ -9,7 +9,7 @@
 import { ElInput } from 'element-plus'
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .header {
   height: 60px;
   border-bottom: 1px solid #eee;

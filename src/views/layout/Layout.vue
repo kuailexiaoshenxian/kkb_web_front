@@ -13,7 +13,7 @@ import Header from './Header.vue'
 import Sidebar from './Sidebar.vue'
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .main {
   height: calc(100vh - 60px);
   display: flex;
